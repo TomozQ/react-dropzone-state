@@ -36,3 +36,14 @@
     transform: rotate(360deg);
   }
 }
+.dropzone{
+  height: 300px;
+  width: 100%;
+  background-color: #ccc;
+}
+.imageSpot{
+  display: flex;
+}
+li{
+  list-style: none;
+}
