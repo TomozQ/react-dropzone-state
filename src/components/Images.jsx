@@ -1,9 +1,18 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { useDropzone } from 'react-dropzone'
 import Image from './Image'
 
 const Images = () => {
     const { acceptedFiles, getRootProps, getInputProps } = useDropzone()
+    const [ files, setFiles ] = useState([])
+
+    useEffect(() => {
+        setFiles( [...files, acceptedFiles] )
+    }, [acceptedFiles])
+
+
+    const arrs = files.filter(function(file){return file.length !== 0 })
+
 
     return(
         <div>
@@ -12,21 +21,7 @@ const Images = () => {
                 <ul className='imagespace'>
                     <input { ...getInputProps() } className='hidden'/>
                     <div className='imageSpot'>
-                        {(() => {
-                            if(acceptedFiles.length <= 3){
-                                let files = acceptedFiles
-                                return <Image files = { files }/>
-                            }else{
-                                let files = acceptedFiles.slice( 0, 3 )
-                                console.log( files )
-                                return (
-                                    <>
-                                        {console.log('return内',files)}
-                                        <Image files = { files }/>
-                                    </>
-                                )
-                            }
-                        })()}
+                        <Image arrs = { arrs } />
                     </div>
                 </ul>
             </div>
