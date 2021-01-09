@@ -1,9 +1,10 @@
-import './App.css';
+import '../App.css';
+import Images from './Images'
 
 function App() {
   return (
       <>
-        This is Maset branch
+        <Images/>
       </>
   );
 }
