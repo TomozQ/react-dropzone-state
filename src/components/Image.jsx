@@ -1,16 +1,22 @@
 import React from 'react'
 
 const Image = ( props ) => {
-    const { files } = props
-    console.log('image', files)
+    const { arrs } = props
+    const pictures = []
+
+    arrs.map(arr => {
+        arr.map((picture => {
+            pictures.push(picture)
+        }))
+    })
 
     return(
         <>
-            {files.map((file, index) => {
+            {pictures.map((picture, index) => {
                 const createObjectURL = ( window.URL || window.webkitURL ).createObjectURL
                 return(
                     <li key={ index }>
-                        <img src={ createObjectURL( file ) } alt='preview'/>
+                        <img src={ createObjectURL( picture ) } alt='preview'/>
                     </li>
                 )
             })}
