@@ -4,11 +4,19 @@ const Image = ( props ) => {
     const { arrs } = props
     const pictures = []
 
+
     arrs.map(arr => {
         arr.map((picture => {
-            pictures.push(picture)
+            if(pictures.length < 3){
+                pictures.push(picture)
+            }else{
+                pictures.push(picture)
+                pictures.shift()
+            }
         }))
     })
+
+    console.log('pictures',pictures)
 
     return(
         <>
