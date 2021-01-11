@@ -36,3 +36,55 @@
     transform: rotate(360deg);
   }
 }
+
+body{
+  background-color: #fff;
+}
+h1{
+  text-align: center;
+  color: #776274;
+}
+.dropzone{
+  height: 200px;
+  width: 30%;
+  margin: auto;
+  background-color: #5A5353;
+}
+.dropzone:hover{
+  box-shadow: 2px 2px 4px 2px #000;
+}
+.dropzone:focus{
+  outline: none;
+}
+
+.imageSpot{
+  display: flex;
+}
+
+li{
+  list-style: none;
+  
+}
+
+img{
+  height: 150px;
+  width: 150px;
+  box-shadow: 2px 2px 3px #000;
+  margin: 20px 10px;
+  background-color: #A07178;
+}
+
+.btnZone{
+  text-align: center;
+  margin-top: 40px;
+}
+
+button{
+  text-align: center;
+  width: 60px;
+  height: 30px;
+  background-color: #776274;
+  color: #fff;
+  border-radius: 4px;
+  cursor: pointer;
+}
