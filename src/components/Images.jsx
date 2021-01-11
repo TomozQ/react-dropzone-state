@@ -20,7 +20,7 @@ const Images = () => {
 
     return(
         <div>
-            <h1 className='listTitle'>画像</h1>
+            <h1 className='listTitle'>Drag and drop the image</h1>
             <div { ...getRootProps({ className: 'dropzone'}) }>
                 <ul className='imagespace'>
                     <input { ...getInputProps() } className='hidden'/>
