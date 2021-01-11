@@ -17,6 +17,9 @@ const Images = () => {
 
     const arrs = files.filter((file) => {return file.length !== 0 })
 
+    const resetImages = () => {
+        setFiles([])
+    }
 
     return(
         <div>
@@ -28,6 +31,9 @@ const Images = () => {
                         <Image arrs = { arrs } />
                     </div>
                 </ul>
+            </div>
+            <div className='btnZone'>
+                <button onClick={ resetImages }>Reset</button>
             </div>
         </div>
     )
