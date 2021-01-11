@@ -41,9 +41,22 @@
   width: 100%;
   background-color: #ccc;
 }
+.dropzone:focus{
+  outline: none;
+}
+
+ul.imageSpace{
+
+}
+
 .imageSpot{
   display: flex;
 }
+
 li{
   list-style: none;
+}
+
+img{
+  
 }

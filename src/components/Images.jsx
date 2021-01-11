@@ -3,6 +3,10 @@ import { useDropzone } from 'react-dropzone'
 import Image from './Image'
 
 const Images = () => {
+    useEffect(() => {
+        window.confirm('写真の登録枚数は3枚までです')
+    },[])
+
     const { acceptedFiles, getRootProps, getInputProps } = useDropzone()
     const [ files, setFiles ] = useState([])
 
@@ -11,7 +15,7 @@ const Images = () => {
     }, [acceptedFiles])
 
 
-    const arrs = files.filter(function(file){return file.length !== 0 })
+    const arrs = files.filter((file) => {return file.length !== 0 })
 
 
     return(
